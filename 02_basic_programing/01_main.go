@@ -1,28 +1,24 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	score := 85.0 // predefined score
 
-	grade := defineGrade(score)
+	// time comlexity -> TO measure the effectveness of the algorithm
+	//how to meatuse  time comlexty
+	//1.look at  basic aperation (the operation that ocuurs most)
+	//2.how long the operation excuted ?
 
-	fmt.Printf("The grade for the score %.2f is: %s\n", score, grade)
-}
+	var n int //declear "n"variable
 
-func defineGrade(score float64) string {
-	switch {
-	case score >= 90:
-		return "A"
-	case score >= 80:
-		return "B"
-	case score >= 70:
-		return "C"
-	case score >= 60:
-		return "D"
-	default:
-		return "F"
+	fmt.Print("input number:")
+	fmt.Scan(&n)
+
+	// genarate square numbers up to "n"
+	//o(n)
+	for i := 1; i <= n; i++ {
+		var squared int = i * i
+		fmt.Println(squared)
 	}
+
 }
